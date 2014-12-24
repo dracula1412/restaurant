@@ -41,3 +41,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem "rspec-rails", "~> 2.14.0"
+gem "foreman"
+group :production, :staging do
+  gem "rails_12factor"
+  gem "rails_stdout_logging"
+  gem "rails_serve_static_assets"
+end
